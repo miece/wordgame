@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+{% block the_body %}
+
+<form action="{{ the_game_url }}" method="POST">
+
+<BR>
+
+    <P>
+        WordGame is a game of skill that will test your spelling ability against the clock.<BR><BR><BR>
+	The rules are simple:
+    <ul><B>
+	<li> You must enter seven words that are made of a source word </li>
+	<BR>
+	<li> These seven words must be a valid dictionary word and not random letters from the source word </li>
+	<BR>
+	<li> You will score a point for each valid word that you successfully complete </li>
+    </ul></B>
+    </P>
+
+<BR><BR><BR><BR><BR>
+    <p>
+
+
+
+    <input type="SUBMIT" value="Play">
+    
+    </p>
+
+</form>
+
+{% endblock %}

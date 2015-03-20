@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+<p>
+The last person to play the game was: {{ the_person }}.
+</p>
+
+Please select from this list of options:
+
+<ul>
+    <li> <a href="{{game_url}}">Play a game</a>
+     <BR>
+    <li> <a href="{{showscores_url}}">Check the High Scores</a>
+</ul>
+
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+
+<table>
+<th>Rank</th>
+<th>Username</th>
+<th>Time</th>
+{% for key, value in the_dict %}
+   <tr>
+	<th> {{ loop.index }}  </th>
+        <th> {{ key }} </th>
+        <td> {{ value }} seconds </td>
+	
+   </tr>
+{% endfor %}
+
+</table>
+
+Go <a href={{home_link}}>Home</a>
+
+{% endblock %}
+
+

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+<form action="{{ the_save_url }}" method="POST">
+
+
+{{fuckers}}
+
+<H2>Your word is: <b>{{the_data}}</b></H2>
+
+
+<BR><BR><BR>
+Answer 1:<input name="word1" type="text" maxlength="255" value=""/>
+<br /><BR>
+                            
+Answer 2:<input name="word2" type="text" maxlength="255" value=""/>
+<br /><BR>
+                            
+Answer 3:<input name="word3" type="text" maxlength="255" value=""/>
+<br /><BR>
+                            
+Answer 4:<input name="word4" type="text" maxlength="255" value=""/>
+<br /><BR>
+                            
+Answer 5:<input name="word5" type="text" maxlength="255" value=""/>
+<br /><BR>
+                            
+Answer 6:<input name="word6" type="text" maxlength="255" value=""/>
+<br /><BR>
+                            
+Answer 7:<input name="word7" type="text" maxlength="255" value=""/>
+<br /><BR>
+<br>
+
+<input type="submit" value="Submit"/>
+<BR><BR><BR>
+
+</form>
+Go <a href={{home_link}}>Home</a>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+<br><br>
+<table>
+<tr>
+<th colspan="2">Source word: {{source}}</th>
+</tr>
+<th>Answer</th>
+<th>Correct</th>
+{% for key, val in test %}
+   <tr>
+        <td> {{ key }}  </td>
+	<td> {{ val }} </td>
+   </tr>
+{% endfor %}
+
+</table>
+
+
+
+<BR><BR>
+<b>You scored: {{the_score}}
+<BR><BR><BR>
+You did it in {{timer}} seconds</b>
+<BR><BR><BR>
+<H1>{{the_message}}</H1>
+<h2><u><a href={{play_again}}>Play Again</a>
+<BR><BR><BR>
+<a href={{home_link}}>Go Home</a></h2></u>
+{% endblock %}

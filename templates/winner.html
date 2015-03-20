@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+<form action="{{ the_game_url }}" method="POST">
+
+Source word: {{source}}
+
+<table>
+<th>Answer</th>
+<th>Correct</th>
+{% for key, val in test %}
+   <tr>
+        <td> {{ key }}  </td>
+	<td> {{ val }} </td>
+   </tr>
+{% endfor %}
+
+</table>
+
+
+<p>
+    Please tell me your name so I can put you on the high score table:<br><br> 
+    <input type="TEXT" name="name" required>
+
+
+</p>
+
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<input type="SUBMIT" value="Submit">
+
+</form>
+{% endblock %}
